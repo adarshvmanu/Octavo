@@ -49,11 +49,11 @@ class App(customtkinter.CTk):
         self.home_frame = customtkinter.CTkFrame(self, corner_radius=0, fg_color="transparent")
         self.home_frame.grid_columnconfigure(0, weight=1)
 
+        self.entry = customtkinter.CTkEntry(self, placeholder_text="CTkEntry")
+        self.entry.grid(row=3, column=1, columnspan=2, padx=10, pady=10, sticky="nsew")
+
         self.textbox = customtkinter.CTkTextbox(self.home_frame, width=500)
         self.textbox.grid(row=0, column=2, padx=10, pady=10, sticky="ew")
-
-        self.entry = customtkinter.CTkEntry(self.home_frame, placeholder_text="Enter Task")
-        self.entry.grid(row=1, column=2, padx=(20, 20), pady=(20, 20), sticky="nsew")
 
         self.home_frame_button_2 = customtkinter.CTkButton(self.home_frame, text="Add", image=self.image_icon_image, compound="left")
         self.home_frame_button_2.grid(row=1, column=2, padx=20, pady=10)
